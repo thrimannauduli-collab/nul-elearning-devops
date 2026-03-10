@@ -1,0 +1,14 @@
+[
+ {
+  "title": "Introduction to Databases",
+  "lecturer": "Dr Smith"
+ },
+ {
+  "title": "Software Engineering Basics",
+  "lecturer": "Dr James"
+ },
+ {
+  "title": "Cloud Computing",
+  "lecturer": "Dr Lee"
+ }
+]

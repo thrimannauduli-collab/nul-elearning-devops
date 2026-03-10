@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Lectures</title>
+</head>
+
+<body>
+
+<h2>Lecture List</h2>
+
+<ul id="lectureList"></ul>
+
+<script>
+
+fetch('/api/lectures')
+.then(res => res.json())
+.then(data => {
+
+ const list = document.getElementById('lectureList')
+
+ data.forEach(lecture => {
+
+   const li = document.createElement('li')
+
+   li.innerText = lecture.title + " - " + lecture.lecturer
+
+   list.appendChild(li)
+
+ })
+
+})
+
+</script>
+
+</body>
+</html>
