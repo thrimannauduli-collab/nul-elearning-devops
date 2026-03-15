@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Lectures</title>
+<title>Lecture List</title>
 </head>
 
 <body>
@@ -13,25 +13,27 @@
 
 <script>
 
-fetch('/api/lectures')
-.then(res => res.json())
+fetch("http://localhost:3000/api/lectures")
+.then(response => response.json())
 .then(data => {
 
- const list = document.getElementById('lectureList')
+  const list = document.getElementById("lectureList")
 
- data.forEach(lecture => {
+  data.forEach(lecture => {
 
-   const li = document.createElement('li')
+    const li = document.createElement("li")
 
-   li.innerText = lecture.title + " - " + lecture.lecturer
+    li.textContent = lecture.title + " - " + lecture.lecturer
 
-   list.appendChild(li)
+    list.appendChild(li)
 
- })
+  })
 
 })
+.catch(error => console.error("Error loading lectures:", error))
 
 </script>
 
 </body>
+
 </html>

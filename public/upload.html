@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Upload Assignment</title>
+<title>Submit Assignment</title>
 </head>
 
 <body>
@@ -29,14 +29,14 @@ form.addEventListener('submit', async (e) => {
 
  const formData = new FormData(form)
 
- const res = await fetch('/api/upload', {
+ const response = await fetch('/api/upload', {
    method: 'POST',
    body: formData
  })
 
- const data = await res.json()
+ const result = await response.json()
 
- document.getElementById('message').innerText = data.message
+ document.getElementById('message').innerText = result.message
 
 })
 

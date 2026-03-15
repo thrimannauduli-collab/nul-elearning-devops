@@ -1,6 +1,13 @@
 const express = require('express')
-const multer = require('multer')
 const cors = require('cors')
+const multer = require('multer')
+
+require('./database/database')
+
+const Lecture = require('./database/Lecture')
+const Assignment = require('./database/Assignment')
+
+
 const fs = require('fs')
 
 const app = express()
